@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import MessageList, MessageDetail, MessageCreate
+from .views import MessageList, MessageDetail, MessageCreate, MessageDelete
 
 urlpatterns = [
     path('', MessageList.as_view(), name='msg_list'),
