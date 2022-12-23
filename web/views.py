@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DeleteView, CreateView
+from django.views.generic import ListView, DetailView, CreateView
 from .models import Message
 from django.urls import reverse_lazy
 
@@ -9,7 +9,7 @@ class MessageList(ListView):
     model = Message
     odering = ['-id']
 
-class MessageDetail(DeleteView):
+class MessageDetail(DetailView):
     model = Message
 
 class MessageCreate(CreateView):
